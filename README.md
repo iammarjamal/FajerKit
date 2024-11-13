@@ -46,11 +46,6 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
-## Credits
-
-- [iammarjamal](https://github.com/iammarjamal)
-- [All Contributors](../../contributors)
-
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
