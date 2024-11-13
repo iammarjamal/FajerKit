@@ -1,5 +1,14 @@
-# A Laravel starter kit with essential packages pre-configured, streamlining setup for a secure, scalable, and organized app.
+<p align="center">
+<a href="https://github.com/iammarjamal/FajerKit" target="_blank">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/thedevdojo/genesis/main/art/logo-light.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/thedevdojo/genesis/main/art/logo.svg">
+    <img alt="Genesis Logo" width="240" src="https://raw.githubusercontent.com/thedevdojo/genesis/main/art/logo.svg">
+  </picture>
+  </a>
+</p>
 
+# FajerKit
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/iammarjamal/fajerkit.svg?style=flat-square)](https://packagist.org/packages/iammarjamal/fajerkit)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/iammarjamal/fajerkit/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/iammarjamal/fajerkit/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/iammarjamal/fajerkit/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/iammarjamal/fajerkit/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
