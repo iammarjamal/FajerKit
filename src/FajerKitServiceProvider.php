@@ -2,9 +2,9 @@
 
 namespace Iammarjamal\FajerKit;
 
+use Iammarjamal\FajerKit\Commands\FajerKitCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Iammarjamal\FajerKit\Commands\FajerKitCommand;
 
 class FajerKitServiceProvider extends PackageServiceProvider
 {

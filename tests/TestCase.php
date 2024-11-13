@@ -2,9 +2,9 @@
 
 namespace Iammarjamal\FajerKit\Tests;
 
+use Iammarjamal\FajerKit\FajerKitServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Iammarjamal\FajerKit\FajerKitServiceProvider;
 
 class TestCase extends Orchestra
 {
