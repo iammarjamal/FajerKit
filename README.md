@@ -1,9 +1,9 @@
 <p align="center">
 <a href="https://github.com/iammarjamal/FajerKit" target="_blank">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/thedevdojo/genesis/main/art/logo-light.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/thedevdojo/genesis/main/art/logo.svg">
-    <img alt="Genesis Logo" width="240" src="https://raw.githubusercontent.com/thedevdojo/genesis/main/art/logo.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://drive.google.com/file/d/1I7JC4dDUGj03Q_jBR93h1S3yka5H4GVl/view">
+    <source media="(prefers-color-scheme: light)" srcset="https://drive.google.com/file/d/1I7JC4dDUGj03Q_jBR93h1S3yka5H4GVl/view">
+    <img alt="Genesis Logo" width="240" src="https://drive.google.com/file/d/1I7JC4dDUGj03Q_jBR93h1S3yka5H4GVl/view">
   </picture>
   </a>
 </p>
