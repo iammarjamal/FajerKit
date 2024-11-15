@@ -4,8 +4,6 @@ namespace Iammarjamal\FajerKit\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
-use Symfony\Component\Process\Process;
-use Symfony\Component\Process\Exception\ProcessFailedException;
 
 class FajerKitCommand extends Command
 {
@@ -19,10 +17,10 @@ class FajerKitCommand extends Command
         ** composerInstall('package_name_in_lower_case', 'composer_package', 'artisan_command_without_php_artisan')
         ** You don't have to edit this function. You can edit the config file before running 'php artisan fajerkit:install'
         */
-    
+
         // Livewire Installation
         $this->composerInstall('livewire', 'livewire/livewire', 'livewire:publish --config');
-    
+
         // Volt Installation
         $this->composerInstall('volt', 'livewire/volt', 'volt:install');
 
@@ -34,22 +32,20 @@ class FajerKitCommand extends Command
 
         // CamelUI Installation
         $this->composerInstall('camelui', 'iammarjamal/camelui', 'vendor:publish --tag="camelui-config"');
-    
+
         // Laravel PWA Installation
         $this->composerInstall('laravel-pwa', 'silviolleite/laravelpwa --prefer-dist', 'vendor:publish --provider="LaravelPWA\Providers\LaravelPWAServiceProvider"');
-    
+
         // Browser Detect Installation
         $this->composerInstall('browser-detect', 'hisorange/browser-detect', '');
-    
 
-        
         /* Node npm Install */
         /*
         ** You can use the following function for npm packages like this:
         ** composerInstall('package_name_in_lower_case', 'npm_command', 'optional_additional_command')
         ** You don't have to edit this function. You can edit the config file before running 'php artisan fajerkit:install'
         */
-    
+
         // TailwindCSS Installation
         $this->nodeInstall(
             'tailwindcss',
@@ -99,67 +95,65 @@ class FajerKitCommand extends Command
             require("@tailwindcss/typography"),
           ],
         }\' > tailwind.config.js'
-        );        
-        
+        );
+
         return self::SUCCESS;
     }
-    
+
     /**
      * Install a package using Composer and run an optional Artisan command.
      *
-     * @param string $packageName The name of the package (in lower case).
-     * @param string $composerCommand The composer command to install the package.
-     * @param string $artisanCommand Optional artisan command to run after installation.
-    */
-
+     * @param  string  $packageName  The name of the package (in lower case).
+     * @param  string  $composerCommand  The composer command to install the package.
+     * @param  string  $artisanCommand  Optional artisan command to run after installation.
+     */
     private function composerInstall(string $packageName, string $composerCommand, string $artisanCommand = '')
     {
         if (config("fajerkit.laravel.$packageName")) {
             // Run Composer Command
             exec('composer require '.$composerCommand, $output, $returnVar);
-            echo implode("\n", $output) . "\n";
-    
+            echo implode("\n", $output)."\n";
+
             // Success or Failure message
-            echo $returnVar === 0 
-                ? "$packageName has been installed successfully." 
+            echo $returnVar === 0
+                ? "$packageName has been installed successfully."
                 : "Failed to install $packageName. Exit Code: $returnVar";
-    
+
             // Run Artisan Command if installation was successful
             if ($returnVar === 0 && $artisanCommand) {
                 exec('php artisan  '.$artisanCommand, $output, $returnVar);
-                echo implode("\n", $output) . "\n";
-                
-                echo $returnVar === 0 
-                ? "$packageName has been installed successfully." 
+                echo implode("\n", $output)."\n";
+
+                echo $returnVar === 0
+                ? "$packageName has been installed successfully."
                 : "Failed to artisan $packageName. Exit Code: $returnVar";
             }
         }
     }
-    
+
     /**
      * Install a Node package via npm.
      *
-     * @param string $packageName The name of the package (in lower case).
-     * @param string $npmCommand The npm command to install the package.
-     * @param string $additionalCommand Optional additional npm commands to run.
-    */
-
+     * @param  string  $packageName  The name of the package (in lower case).
+     * @param  string  $npmCommand  The npm command to install the package.
+     * @param  string  $additionalCommand  Optional additional npm commands to run.
+     */
     private function nodeInstall(string $packageName, string $npmCommand, string $additionalCommand = '')
     {
         if (config("fajerkit.node.$packageName")) {
             // Run npm command
             exec($npmCommand, $output, $returnVar);
-            echo implode("\n", $output) . "\n";
-    
+            echo implode("\n", $output)."\n";
+
             // Success or Failure message
-            echo $returnVar === 0 
-                ? "$packageName has been installed successfully via npm." 
+            echo $returnVar === 0
+                ? "$packageName has been installed successfully via npm."
                 : "Failed to install $packageName via npm. Exit Code: $returnVar";
-    
+
             // Run additional npm command if provided
             if ($returnVar === 0 && $additionalCommand) {
                 exec($additionalCommand, $output, $returnVar);
-                echo implode("\n", $output) . "\n";
+                echo implode("\n", $output)."\n";
             }
         }
     }
