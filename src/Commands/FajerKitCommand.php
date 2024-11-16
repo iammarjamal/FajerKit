@@ -39,6 +39,9 @@ class FajerKitCommand extends Command
         // Browser Detect Installation
         $this->composerInstall('browser-detect', 'hisorange/browser-detect', '');
 
+        // Laravel Page Speed Installation
+        $this->composerInstall('laravel-page-speed', 'renatomarinho/laravel-page-speed', 'vendor:publish --provider="RenatoMarinho\LaravelPageSpeed\ServiceProvider"');
+
         /* Node npm Install */
         /*
         ** You can use the following function for npm packages like this:
