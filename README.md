@@ -25,7 +25,7 @@ You can publish the config file with:
 php artisan vendor:publish --tag="fajerkit-config"
 ```
 
-"This is the content of the published configuration file below. You can set the package option to false to prevent the package from being installed."
+This is the content of the published configuration file below. You can set the package option to false to prevent the package from being installed.
 
 ```php
 return [
