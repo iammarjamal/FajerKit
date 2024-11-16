@@ -35,7 +35,7 @@ return [
         // Laravel Page Speed: Package to optimize your site automatically which results in a 35%+ optimization.
         // More info: https://github.com/renatomarinho/laravel-page-speed
         'laravel-page-speed' => true,
-        
+
     ],
 
     // Javascript Packages (Node)
