@@ -44,7 +44,7 @@ class FajerKitCommand extends Command
 
         // Laravel Horizon Installation
         $this->composerInstall('laravel-horizon', 'laravel/horizon', 'horizon:install');
-        
+
         // Laravel Pulse Installation
         $this->composerInstall('laravel-pulse', 'laravel/pulse', 'vendor:publish --provider="Laravel\Pulse\PulseServiceProvider"');
 
