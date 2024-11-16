@@ -42,6 +42,12 @@ class FajerKitCommand extends Command
         // Laravel Page Speed Installation
         $this->composerInstall('laravel-page-speed', 'renatomarinho/laravel-page-speed', 'vendor:publish --provider="RenatoMarinho\LaravelPageSpeed\ServiceProvider"');
 
+        // Laravel Horizon Installation
+        $this->composerInstall('laravel-horizon', 'laravel/horizon', 'horizon:install');
+        
+        // Laravel Pulse Installation
+        $this->composerInstall('laravel-pulse', 'laravel/pulse', 'vendor:publish --provider="Laravel\Pulse\PulseServiceProvider"');
+
         /* Node npm Install */
         /*
         ** You can use the following function for npm packages like this:

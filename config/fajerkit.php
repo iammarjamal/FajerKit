@@ -34,7 +34,15 @@ return [
 
         // Laravel Page Speed: Package to optimize your site automatically which results in a 35%+ optimization.
         // More info: https://github.com/renatomarinho/laravel-page-speed
-        'laravel-page-speed' => true,
+        'laravel-page-speed' => false,
+
+        // Laravel Horizon: a beautiful dashboard and code-driven configuration for your Laravel powered Redis queues.
+        // More info: https://laravel.com/docs/11.x/horizon
+        'laravel-horizon' => false,
+
+        // Laravel Pulse: Laravel Pulse delivers at-a-glance insights into your application's performance and usage.
+        // More info: https://laravel.com/docs/11.x/pulse
+        'laravel-pulse' => false,
 
     ],
 
