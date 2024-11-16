@@ -71,6 +71,10 @@ return [
         // More info: https://laravel.com/docs/11.x/pulse
         'laravel-pulse' => false,
 
+        // Laravel Telescope: A wonderful companion to your local Laravel development environment.
+        // More info: https://laravel.com/docs/11.x/telescope
+        'laravel-telescope' => false,
+
     ],
 
     // Javascript Packages (Node)
