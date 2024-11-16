@@ -16,7 +16,7 @@ A Laravel starter kit with essential packages pre-configured, streamlining setup
 You can install the package via composer:
 
 ```bash
-composer require iammarjamal/fajerkit
+composer require iammarjamal/fajerkit --dev
 ```
 
 You can publish the config file with:

@@ -48,6 +48,9 @@ class FajerKitCommand extends Command
         // Laravel Pulse Installation
         $this->composerInstall('laravel-pulse', 'laravel/pulse', 'vendor:publish --provider="Laravel\Pulse\PulseServiceProvider"');
 
+        // Laravel Telescope Installation
+        $this->composerInstall('laravel-telescope', 'laravel/telescope', 'telescope:install');
+
         /* Node npm Install */
         /*
         ** You can use the following function for npm packages like this:
